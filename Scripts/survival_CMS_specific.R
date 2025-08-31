@@ -155,41 +155,6 @@ for(strata in c("CD274_median", "CD274_25p", "CD274_75p", "CD274_66p", "CD274_33
 }
 
 ######################################################################################
-#For cms subtypes - only showing overall survival for each cms subtype 
-#nothing to do with gene ex. 
 
-#CMS1_gTxt <- paste("CMS1 GOI", sep="")
-#CMS1_gTxt <- paste("CMS1 GOI", sep="")
-#CMS1_gTxt <- paste("CMS1 GOI", sep="")
-#CMS1_gTxt <- paste("CMS1 GOI", sep="")
-#suffix <- paste(datasetName, strata, sep="_")
 
-#fit<- survfit(Surv(PFI.time, PFI) ~ usedSubset, data= tmp.sub)
-#p <-  ggsurvplot(fit, palette = c("#ED0000FF","black", "green"),title=paste(strata,sep=" - "), xlab="Months", ylab="Progression Free Interval (PFI)",
-#                break.time.by = 30, 
-#               xlim = c(0, 2000),
-#              font.x = c(18, "black"),
-#             font.y = c(18, "black"),
-#            font.tickslab = c(18, "plain", "black"),
-#           legend = c(0.25, 0.15),
-#          legend.title = "",
-#         legend.labs = c(paste0(H_gTxt, " (n = ", dim(subset(tmp.sub,usedSubset=="HIGH"))[[1]],")",sep=""), 
-#                         paste0(L_gTxt, " (n = ", dim(subset(tmp.sub,usedSubset=="LOW"))[[1]],")",sep=""),
-#                        paste0(CMS1_gTxt, " (n = ", dim(subset(tmp.sub,paper_res=="CMS1"))[[1]],")",sep="")),
-#      font.legend = c(18, "black"),
-#     fun = function(y) y*100,
-#    pval = TRUE, pval.coord = c(70, 80), pval.size = 5,
-#   size = 1, censor.size = 2)
-#  
-
-#tiff(filename =  paste("out/Final/CMS1/KM_", sc, "_", suffix,"_v2.tiff", sep = ""),   
-#    width = 530, height = 500, units = "px", pointsize = 12, compression = c("none"), bg = "white")
-#print(p)
-#dev.off()
-
-#31
-#39
-#67
-#96
-#122
 #149

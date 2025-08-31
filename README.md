@@ -6,7 +6,7 @@ This Repo contains the full materials and methods including all code used in com
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Running CMSclassifier](#Running-CMSclassifier)
-- [Merging Files](#merging-files)
-- [QCing Long Read Files](#qcing-long-read-files)
-- [Assemblies](#assemblies)
-- [Reviewing Assembly Quality](#reviewing-assembly-quality)
+- [Gene Expression Analysis](#gene-expression-analysis)
+- [Isoform Proportion Analysis Preperation in Ada](#transcript-preperation-analysis-in-ada)
+- [Isoform Analysis](#isoform-analysis)
+- [Survival Analysis](#survival-analysis)

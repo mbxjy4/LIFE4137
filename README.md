@@ -55,11 +55,11 @@ NOTE: The above analysis was also performed on specific transcripts if isoform g
 <!-- TOC --><a name="survival-analysis"></a>
 ## Survival Analysis
 
-Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TCGA_survival_data&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Code was provided by Heshmat Borhani and edited as appropriate. Due to word limitations, only DSS was evaluated.
+Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TCGA_survival_data&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Code was provided by Heshmat Borhani with minor edits performed. Due to word limitations, only DSS was evaluated.
 
 Script used: survival_CMS_specific.R 
 
-Update file names and directories as appropriate. To run the code for each gene, assign a new column with the desired gene's ENSG ID. E.g.
+Update file names and directories as appropriate. To run the code for each gene, create a new column in DF with the desired gene's ENSG ID. E.g.
 
 ```bash
 #Create column in DF for GOI and set it to be the respective ENSG ID

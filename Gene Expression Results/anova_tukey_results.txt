@@ -1,0 +1,1618 @@
+
+> #Loop through each gene
+> for (gene in gene_cols) {
++   cat("Analysing Gene:", gene, "\n")
++   
++   
++   #Define formula as 'ENSG ID, ~paper_res' -> .... [TRUNCATED] 
+Analysing Gene: ENSG00000117394.19 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3    6.4   2.123   1.598   0.19
+Residuals   273  362.7   1.329               
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr       upr     p adj
+CMS2-CMS1 -0.19665752 -0.7454903 0.3521753 0.7908250
+CMS3-CMS1 -0.44899437 -1.1072727 0.2092839 0.2934698
+CMS4-CMS1 -0.01675257 -0.5902623 0.5567571 0.9998453
+CMS3-CMS2 -0.25233685 -0.7914550 0.2867813 0.6210979
+CMS4-CMS2  0.17990494 -0.2516405 0.6114504 0.7034931
+CMS4-CMS3  0.43224180 -0.1319783 0.9964619 0.1979645
+
+Analysing Gene: ENSG00000158481.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  110.0   36.65   19.09 2.91e-11 ***
+Residuals   271  520.2    1.92                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+2 observations deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr       upr     p adj
+CMS2-CMS1 0.03021747 -0.6364382 0.6968731 0.9994236
+CMS3-CMS1 0.25869321 -0.5377142 1.0551006 0.8354815
+CMS4-CMS1 1.43982661  0.7445489 2.1351043 0.0000011
+CMS3-CMS2 0.22847574 -0.4203220 0.8772735 0.7993604
+CMS4-CMS2 1.40960914  0.8899123 1.9293060 0.0000000
+CMS4-CMS3 1.18113340  0.5029595 1.8593073 0.0000589
+
+Analysing Gene: ENSG00000113520.10 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3   34.1  11.351   2.092  0.102
+Residuals   273 1481.1   5.425               
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr       upr     p adj
+CMS2-CMS1 -0.84228335 -1.9513258 0.2667591 0.2046054
+CMS3-CMS1 -0.20724896 -1.5374512 1.1229533 0.9778670
+CMS4-CMS1 -0.17143139 -1.3303393 0.9874765 0.9809437
+CMS3-CMS2  0.63503439 -0.4543775 1.7244463 0.4348085
+CMS4-CMS2  0.67085196 -0.2011845 1.5428884 0.1948015
+CMS4-CMS3  0.03581757 -1.1043186 1.1759537 0.9998076
+
+Analysing Gene: ENSG00000152256.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   8.67  2.8912   6.381 0.000341 ***
+Residuals   273 123.69  0.4531                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -0.50058577 -0.82107503 -0.1800965 0.0004067
+CMS3-CMS1 -0.25583083 -0.64023048  0.1285688 0.3150658
+CMS4-CMS1 -0.46654771 -0.80144699 -0.1316484 0.0021208
+CMS3-CMS2  0.24475493 -0.07006151  0.5595714 0.1869123
+CMS4-CMS2  0.03403806 -0.21796160  0.2860377 0.9853592
+CMS4-CMS3 -0.21071687 -0.54019153  0.1187578 0.3507030
+
+Analysing Gene: ENSG00000138755.5 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  365.0  121.65   36.79 <2e-16 ***
+Residuals   273  902.8    3.31                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1 -2.8652651 -3.7311418 -1.99938829 0.0000000
+CMS3-CMS1 -2.9734674 -4.0120130 -1.93492172 0.0000000
+CMS4-CMS1 -0.9960055 -1.9008144 -0.09119673 0.0244984
+CMS3-CMS2 -0.1082023 -0.9587526  0.74234801 0.9877051
+CMS4-CMS2  1.8692595  1.1884235  2.55009559 0.0000000
+CMS4-CMS3  1.9774618  1.0873089  2.86761475 0.0000001
+
+Analysing Gene: ENSG00000136997.14 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  25.26   8.421   10.76 1.05e-06 ***
+Residuals   273 213.63   0.783                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1  0.7837223  0.3625312  1.2049134 0.0000148
+CMS3-CMS1  0.1666161 -0.3385669  0.6717990 0.8291386
+CMS4-CMS1  0.3223467 -0.1177822  0.7624757 0.2333565
+CMS3-CMS2 -0.6171062 -1.0308420 -0.2033704 0.0008262
+CMS4-CMS2 -0.4613756 -0.7925567 -0.1301944 0.0021204
+CMS4-CMS3  0.1557307 -0.2772691  0.5887305 0.7889531
+
+Analysing Gene: ENSG00000121879.3 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  19.98   6.659   16.57 6.38e-10 ***
+Residuals   273 109.68   0.402                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr       upr     p adj
+CMS2-CMS1 -0.1339887 -0.4357886 0.1678112 0.6603383
+CMS3-CMS1 -0.2399158 -0.6018992 0.1220675 0.3187434
+CMS4-CMS1  0.4392655  0.1238959 0.7546351 0.0021255
+CMS3-CMS2 -0.1059271 -0.4023850 0.1905308 0.7922366
+CMS4-CMS2  0.5732542  0.3359499 0.8105585 0.0000000
+CMS4-CMS3  0.6791813  0.3689200 0.9894426 0.0000002
+
+Analysing Gene: ENSG00000089692.8 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  187.2   62.41   38.69 <2e-16 ***
+Residuals   273  440.4    1.61                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -2.3706096 -2.9753638 -1.7658554 0.0000000
+CMS3-CMS1 -2.0077708 -2.7331220 -1.2824195 0.0000000
+CMS4-CMS1 -1.2262768 -1.8582223 -0.5943314 0.0000057
+CMS3-CMS2  0.3628388 -0.2312109  0.9568885 0.3924166
+CMS4-CMS2  1.1443328  0.6688166  1.6198490 0.0000000
+CMS4-CMS3  0.7814940  0.1597846  1.4032033 0.0070888
+
+Analysing Gene: ENSG00000163606.10 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  108.5   36.18   15.55 2.29e-09 ***
+Residuals   273  635.2    2.33                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -0.8423680 -1.5686397 -0.1160962 0.0156202
+CMS3-CMS1 -1.0001295 -1.8712308 -0.1290282 0.0171124
+CMS4-CMS1  0.4913247 -0.2676020  1.2502515 0.3397350
+CMS3-CMS2 -0.1577615 -0.8711779  0.5556548 0.9404670
+CMS4-CMS2  1.3336927  0.7626276  1.9047578 0.0000000
+CMS4-CMS3  1.4914543  0.7448204  2.2380881 0.0000028
+
+Analysing Gene: ENSG00000163359.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  334.9  111.62   95.61 <2e-16 ***
+Residuals   273  318.7    1.17                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr    p adj
+CMS2-CMS1 -0.9741020 -1.4885692 -0.4596349 0.000010
+CMS3-CMS1 -1.6797277 -2.2967874 -1.0626680 0.000000
+CMS4-CMS1  1.2547602  0.7171613  1.7923592 0.000000
+CMS3-CMS2 -0.7056256 -1.2109865 -0.2002648 0.002059
+CMS4-CMS2  2.2288623  1.8243384  2.6333861 0.000000
+CMS4-CMS3  2.9344879  2.4055968  3.4633789 0.000000
+
+Analysing Gene: ENSG00000148848.14 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  609.8  203.26   113.3 <2e-16 ***
+Residuals   273  489.7    1.79                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.8139219 -2.4515958 -1.1762479 0.0000000
+CMS3-CMS1 -2.7531072 -3.5179430 -1.9882715 0.0000000
+CMS4-CMS1  1.1291103  0.4627649  1.7954557 0.0000993
+CMS3-CMS2 -0.9391853 -1.5655721 -0.3127985 0.0007647
+CMS4-CMS2  2.9430322  2.4416312  3.4444331 0.0000000
+CMS4-CMS3  3.8822175  3.2266654  4.5377696 0.0000000
+
+Analysing Gene: ENSG00000067225.17 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  30.71  10.238   23.95 8.74e-14 ***
+Residuals   272 116.27   0.427                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -1.01841896 -1.33009894 -0.7067390 0.0000000
+CMS3-CMS1 -0.76214331 -1.13553461 -0.3887520 0.0000016
+CMS4-CMS1 -0.81178617 -1.13709468 -0.4864777 0.0000000
+CMS3-CMS2  0.25627566 -0.04990058  0.5624519 0.1361121
+CMS4-CMS2  0.20663279 -0.03861903  0.4518846 0.1319969
+CMS4-CMS3 -0.04964287 -0.36968210  0.2703964 0.9781455
+
+Analysing Gene: ENSG00000169554.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  247.0   82.33   90.86 <2e-16 ***
+Residuals   273  247.4    0.91                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1 -0.9993566 -1.4525940 -0.54611923 0.0000002
+CMS3-CMS1 -1.4157059 -1.9593257 -0.87208616 0.0000000
+CMS4-CMS1  0.9824243  0.5088082  1.45604043 0.0000010
+CMS3-CMS2 -0.4163493 -0.8615642  0.02886557 0.0762055
+CMS4-CMS2  1.9817809  1.6254019  2.33816003 0.0000000
+CMS4-CMS3  2.3981302  1.9321857  2.86407483 0.0000000
+
+Analysing Gene: ENSG00000091664.7 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3   1.54  0.5141   2.427 0.0659 .
+Residuals   270  57.20  0.2119                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+3 observations deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff          lwr       upr     p adj
+CMS2-CMS1 -0.08648500 -0.306182698 0.1332127 0.7392629
+CMS3-CMS1 -0.08648500 -0.349365577 0.1763956 0.8301670
+CMS4-CMS1  0.08226683 -0.147215477 0.3117491 0.7905541
+CMS3-CMS2  0.00000000 -0.215827620 0.2158276 1.0000000
+CMS4-CMS2  0.16875183 -0.004849705 0.3423534 0.0601736
+CMS4-CMS3  0.16875183 -0.057028179 0.3945318 0.2170620
+
+Analysing Gene: ENSG00000165556.9 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  160.3   53.42   43.11 <2e-16 ***
+Residuals   272  337.1    1.24                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1  2.3383081  1.8032862  2.8733300 0.0000000
+CMS3-CMS1  1.9565730  1.3166761  2.5964698 0.0000000
+CMS4-CMS1  1.6919538  1.1333126  2.2505950 0.0000000
+CMS3-CMS2 -0.3817352 -0.9023915  0.1389211 0.2324732
+CMS4-CMS2 -0.6463543 -1.0631216 -0.2295870 0.0004557
+CMS4-CMS3 -0.2646191 -0.8095177  0.2802795 0.5921812
+
+Analysing Gene: ENSG00000168036.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   6.15  2.0505   7.471 7.98e-05 ***
+Residuals   273  74.93  0.2745                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr         upr     p adj
+CMS2-CMS1  0.20164356 -0.04780392  0.45109104 0.1590847
+CMS3-CMS1 -0.13319534 -0.43238641  0.16599573 0.6583673
+CMS4-CMS1  0.28823068  0.02756740  0.54889395 0.0236096
+CMS3-CMS2 -0.33483890 -0.57987104 -0.08980677 0.0027088
+CMS4-CMS2  0.08658711 -0.10955262  0.28272685 0.6643871
+CMS4-CMS3  0.42142602  0.16498490  0.67786713 0.0001730
+
+Analysing Gene: ENSG00000156510.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value  Pr(>F)   
+paper_res     3   13.5   4.501   4.588 0.00375 **
+Residuals   273  267.8   0.981                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr          upr     p adj
+CMS2-CMS1  0.45372448 -0.0178743  0.925323264 0.0642000
+CMS3-CMS1 -0.08943794 -0.6550806  0.476204747 0.9769077
+CMS4-CMS1  0.08060934 -0.4121937  0.573412412 0.9745457
+CMS3-CMS2 -0.54316242 -1.0064137 -0.079911175 0.0141424
+CMS4-CMS2 -0.37311514 -0.7439317 -0.002298562 0.0479508
+CMS4-CMS3  0.17004728 -0.3147735  0.654868038 0.8013189
+
+Analysing Gene: ENSG00000115414.18 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  415.8  138.59   71.85 <2e-16 ***
+Residuals   273  526.6    1.93                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+               diff        lwr        upr     p adj
+CMS2-CMS1 -1.023907 -1.6851884 -0.3626248 0.0004673
+CMS3-CMS1 -2.355982 -3.1491329 -1.5628302 0.0000000
+CMS4-CMS1  1.172367  0.4813525  1.8633819 0.0000970
+CMS3-CMS2 -1.332075 -1.9816517 -0.6824982 0.0000014
+CMS4-CMS2  2.196274  1.6763101  2.7162375 0.0000000
+CMS4-CMS3  3.528349  2.8485269  4.2081705 0.0000000
+
+Analysing Gene: ENSG00000085733.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3   1.85  0.6163   2.168 0.0921 .
+Residuals   273  77.62  0.2843                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -0.21675413 -0.47063555 0.03712729 0.1239138
+CMS3-CMS1 -0.16608869 -0.47059790 0.13842051 0.4942278
+CMS4-CMS1 -0.07187116 -0.33716774 0.19342541 0.8969045
+CMS3-CMS2  0.05066544 -0.19872215 0.30005303 0.9529595
+CMS4-CMS2  0.14488297 -0.05474316 0.34450910 0.2407722
+CMS4-CMS3  0.09421753 -0.16678183 0.35521690 0.7870796
+
+Analysing Gene: ENSG00000141646.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  39.13  13.042   17.78 1.44e-10 ***
+Residuals   273 200.29   0.734                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -0.83697788 -1.2448116 -0.4291442 0.0000014
+CMS3-CMS1 -0.81573629 -1.3048982 -0.3265744 0.0001332
+CMS4-CMS1 -0.11624509 -0.5424161  0.3099259 0.8950269
+CMS3-CMS2  0.02124159 -0.3793733  0.4218564 0.9990793
+CMS4-CMS2  0.72073278  0.4000545  1.0414111 0.0000001
+CMS4-CMS3  0.69949120  0.2802233  1.1187591 0.0001321
+
+Analysing Gene: ENSG00000110092.3 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   19.1   6.366   12.71 8.38e-08 ***
+Residuals   273  136.7   0.501                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff         lwr         upr     p adj
+CMS2-CMS1 -0.3924610 -0.72937001 -0.05555197 0.0150162
+CMS3-CMS1 -0.8970348 -1.30112860 -0.49294109 0.0000002
+CMS4-CMS1 -0.2175902 -0.56964753  0.13446708 0.3816733
+CMS3-CMS2 -0.5045739 -0.83551941 -0.17362830 0.0005942
+CMS4-CMS2  0.1748708 -0.09003969  0.43978122 0.3223320
+CMS4-CMS3  0.6794446  0.33308986  1.02579938 0.0000044
+
+Analysing Gene: ENSG00000105173.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  28.31   9.437   15.92 1.45e-09 ***
+Residuals   272 161.25   0.593                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1  0.1152666 -0.2517734  0.48230664 0.8488690
+CMS3-CMS1 -0.3448609 -0.7845732  0.09485152 0.1804728
+CMS4-CMS1 -0.6223975 -1.0054867 -0.23930824 0.0002114
+CMS3-CMS2 -0.4601275 -0.8206862 -0.09956879 0.0060249
+CMS4-CMS2 -0.7376641 -1.0264771 -0.44885109 0.0000000
+CMS4-CMS3 -0.2775366 -0.6544206  0.09934743 0.2289332
+
+Analysing Gene: ENSG00000121594.11 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  162.6   54.19   38.12 <2e-16 ***
+Residuals   270  383.8    1.42                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+3 observations deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.4846654 -2.0523490 -0.9169818 0.0000000
+CMS3-CMS1 -1.3717715 -2.0609132 -0.6826298 0.0000031
+CMS4-CMS1  0.1349748 -0.4594084  0.7293580 0.9359408
+CMS3-CMS2  0.1128939 -0.4547897  0.6805774 0.9556800
+CMS4-CMS2  1.6196402  1.1717120  2.0675685 0.0000000
+CMS4-CMS3  1.5067464  0.9123632  2.1011296 0.0000000
+
+Analysing Gene: ENSG00000213281.4 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   7.02  2.3403   9.054 9.81e-06 ***
+Residuals   273  70.57  0.2585                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                  diff        lwr         upr     p adj
+CMS2-CMS1  0.392998164  0.1509256  0.63507077 0.0002139
+CMS3-CMS1  0.086422222 -0.2039233  0.37676776 0.8681935
+CMS4-CMS1  0.383816500  0.1308597  0.63677331 0.0006395
+CMS3-CMS2 -0.306575942 -0.5443637 -0.06878814 0.0053802
+CMS4-CMS2 -0.009181664 -0.1995226  0.18115923 0.9993059
+CMS4-CMS3  0.297394278  0.0485348  0.54625375 0.0118174
+
+Analysing Gene: ENSG00000188676.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  123.2   41.05    7.27 0.000104 ***
+Residuals   273 1541.6    5.65                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr       upr     p adj
+CMS2-CMS1 -0.8397705 -1.9712254 0.2916843 0.2226438
+CMS3-CMS1 -1.0243921 -2.3814761 0.3326918 0.2093322
+CMS4-CMS1  0.5848744 -0.5974535 1.7672023 0.5772803
+CMS3-CMS2 -0.1846216 -1.2960491 0.9268059 0.9733975
+CMS4-CMS2  1.4246449  0.5349857 2.3143041 0.0002702
+CMS4-CMS3  1.6092665  0.4460897 2.7724434 0.0023176
+
+Analysing Gene: ENSG00000105329.9 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  152.9   50.97   68.49 <2e-16 ***
+Residuals   273  203.2    0.74                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                   diff        lwr        upr     p adj
+CMS2-CMS1 -1.3508729893 -1.7616419 -0.9401041 0.0000000
+CMS3-CMS1 -1.3514275416 -1.8441100 -0.8587451 0.0000000
+CMS4-CMS1  0.2056567566 -0.2235814  0.6348949 0.6029165
+CMS3-CMS2 -0.0005545523 -0.4040526  0.4029435 1.0000000
+CMS4-CMS2  1.5565297459  1.2335435  1.8795160 0.0000000
+CMS4-CMS3  1.5570842982  1.1347989  1.9793697 0.0000000
+
+Analysing Gene: ENSG00000198848.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  441.6  147.21   38.17 <2e-16 ***
+Residuals   273 1053.0    3.86                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1  2.4303685  1.4952582  3.3654788 0.0000000
+CMS3-CMS1 -0.2789205 -1.4005059  0.8426649 0.9179773
+CMS4-CMS1  2.8183920  1.8412368  3.7955473 0.0000000
+CMS3-CMS2 -2.7092890 -3.6278473 -1.7907306 0.0000000
+CMS4-CMS2  0.3880235 -0.3472506  1.1232977 0.5229841
+CMS4-CMS3  3.0973125  2.1359850  4.0586400 0.0000000
+
+Analysing Gene: ENSG00000109670.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3   2.71  0.9045   3.373  0.019 *
+Residuals   273  73.20  0.2681                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -0.10278004 -0.34933562 0.14377553 0.7035272
+CMS3-CMS1 -0.23636915 -0.53209162 0.05935332 0.1669139
+CMS4-CMS1  0.05293895 -0.20470239 0.31058030 0.9514461
+CMS3-CMS2 -0.13358911 -0.37578052 0.10860231 0.4843195
+CMS4-CMS2  0.15571899 -0.03814685 0.34958483 0.1634807
+CMS4-CMS3  0.28930810  0.03583998 0.54277623 0.0180235
+
+Analysing Gene: ENSG00000134258.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  212.9   70.96   7.245 0.000108 ***
+Residuals   273 2673.8    9.79                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -2.06687459 -3.5569574 -0.5767917 0.0022423
+CMS3-CMS1  0.09863587 -1.6885919  1.8858637 0.9989623
+CMS4-CMS1 -1.08506103 -2.6421418  0.4720197 0.2749236
+CMS3-CMS2  2.16551046  0.7018029  3.6292181 0.0009303
+CMS4-CMS2  0.98181356 -0.1898337  2.1534608 0.1353955
+CMS4-CMS3 -1.18369690 -2.7155564  0.3481626 0.1914616
+
+Analysing Gene: ENSG00000117713.17 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+paper_res     3   7.87   2.622   5.592 0.00098 ***
+Residuals   273 128.02   0.469                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -0.44528804 -0.77134672 -0.1192294 0.0027297
+CMS3-CMS1 -0.21554899 -0.60662869  0.1755307 0.4849957
+CMS4-CMS1 -0.13752481 -0.47824392  0.2031943 0.7240855
+CMS3-CMS2  0.22973904 -0.09054823  0.5500263 0.2504930
+CMS4-CMS2  0.30776323  0.05138436  0.5641421 0.0113144
+CMS4-CMS3  0.07802419 -0.25717603  0.4132244 0.9314640
+
+Analysing Gene: ENSG00000131203.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  339.8  113.25   32.95 <2e-16 ***
+Residuals   272  934.7    3.44                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -3.11387272 -3.9965494 -2.2311960 0.0000000
+CMS3-CMS1 -3.04577634 -4.1107514 -1.9808012 0.0000000
+CMS4-CMS1 -1.66930570 -2.5916698 -0.7469416 0.0000270
+CMS3-CMS2  0.06809638 -0.8066127  0.9428055 0.9971093
+CMS4-CMS2  1.44456702  0.7505212  2.1386128 0.0000010
+CMS4-CMS3  1.37647064  0.4617284  2.2912129 0.0007251
+
+Analysing Gene: ENSG00000197646.7 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  356.5  118.85   70.47 <2e-16 ***
+Residuals   273  460.4    1.69                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -2.0453710 -2.6637186 -1.4270235 0.0000000
+CMS3-CMS1 -2.2269277 -2.9685830 -1.4852723 0.0000000
+CMS4-CMS1  0.2655018 -0.3806482  0.9116519 0.7128447
+CMS3-CMS2 -0.1815566 -0.7889591  0.4258458 0.8667611
+CMS4-CMS2  2.3108729  1.8246682  2.7970775 0.0000000
+CMS4-CMS3  2.4924295  1.8567457  3.1281133 0.0000000
+
+Analysing Gene: ENSG00000148516.21 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  236.3   78.75   93.47 <2e-16 ***
+Residuals   273  230.0    0.84                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -0.2710589 -0.7081158  0.1659980 0.3785378
+CMS3-CMS1 -0.9363615 -1.4605742 -0.4121488 0.0000354
+CMS4-CMS1  1.5694882  1.1127801  2.0261963 0.0000000
+CMS3-CMS2 -0.6653026 -1.0946234 -0.2359818 0.0004612
+CMS4-CMS2  1.8405471  1.4968907  2.1842035 0.0000000
+CMS4-CMS3  2.5058497  2.0565392  2.9551602 0.0000000
+
+Analysing Gene: ENSG00000133703.11 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   5.31  1.7701    6.27 0.000396 ***
+Residuals   272  76.78  0.2823                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr       upr     p adj
+CMS2-CMS1 -0.13805898 -0.39134301 0.1152250 0.4947852
+CMS3-CMS1  0.15394374 -0.14948946 0.4573769 0.5564090
+CMS4-CMS1  0.16599660 -0.09836254 0.4303557 0.3672885
+CMS3-CMS2  0.29200272  0.04319125 0.5408142 0.0140224
+CMS4-CMS2  0.30405558  0.10475382 0.5033573 0.0005887
+CMS4-CMS3  0.01205286 -0.24802425 0.2721300 0.9993841
+
+Analysing Gene: ENSG00000046774.9 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3   66.3  22.086   2.517 0.0585 .
+Residuals   273 2395.5   8.775                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr      upr     p adj
+CMS2-CMS1  0.8789986 -0.5314067 2.289404 0.3741102
+CMS3-CMS1  0.2317212 -1.4599402 1.923383 0.9847502
+CMS4-CMS1  1.3639239 -0.1098968 2.837745 0.0809707
+CMS3-CMS2 -0.6472774 -2.0327178 0.738163 0.6224998
+CMS4-CMS2  0.4849253 -0.6240717 1.593922 0.6711303
+CMS4-CMS3  1.1322027 -0.3177454 2.582151 0.1836880
+
+Analysing Gene: ENSG00000139926.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  333.5  111.17   122.3 <2e-16 ***
+Residuals   273  248.1    0.91                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -0.8992105 -1.3531333 -0.4452877 0.0000034
+CMS3-CMS1 -1.5283124 -2.0727542 -0.9838706 0.0000000
+CMS4-CMS1  1.3642730  0.8899407  1.8386053 0.0000000
+CMS3-CMS2 -0.6291019 -1.0749900 -0.1832138 0.0017961
+CMS4-CMS2  2.2634834  1.9065655  2.6204014 0.0000000
+CMS4-CMS3  2.8925854  2.4259362  3.3592346 0.0000000
+
+Analysing Gene: ENSG00000168646.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  279.9   93.31   67.62 <2e-16 ***
+Residuals   273  376.7    1.38                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1  3.0734691  2.5141345  3.63280374 0.0000000
+CMS3-CMS1  2.4715167  1.8006424  3.14239110 0.0000000
+CMS4-CMS1  2.2639291  1.6794454  2.84841278 0.0000000
+CMS3-CMS2 -0.6019524 -1.1513865 -0.05251829 0.0254611
+CMS4-CMS2 -0.8095401 -1.2493430 -0.36973711 0.0000188
+CMS4-CMS3 -0.2075877 -0.7826041  0.36742870 0.7870455
+
+Analysing Gene: ENSG00000157764.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   4.97   1.655     7.7 5.89e-05 ***
+Residuals   273  58.69   0.215                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff          lwr        upr     p adj
+CMS2-CMS1  0.22917526  0.008408802 0.44994171 0.0384997
+CMS3-CMS1  0.07049111 -0.194299497 0.33528173 0.9015701
+CMS4-CMS1  0.37848013  0.147787451 0.60917281 0.0001782
+CMS3-CMS2 -0.15868414 -0.375542918 0.05817463 0.2340803
+CMS4-CMS2  0.14930487 -0.024283066 0.32289281 0.1195119
+CMS4-CMS3  0.30798901  0.081033044 0.53494499 0.0029523
+
+Analysing Gene: ENSG00000103460.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3   4.62  1.5415   2.307 0.0769 .
+Residuals   271 181.08  0.6682                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+2 observations deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1  0.27810249 -0.1185943 0.67479932 0.2697778
+CMS3-CMS1 -0.06396905 -0.5370576 0.40911953 0.9853116
+CMS4-CMS1  0.13561428 -0.2782670 0.54949554 0.8318727
+CMS3-CMS2 -0.34207153 -0.7244035 0.04026044 0.0976231
+CMS4-CMS2 -0.14248821 -0.4485317 0.16355529 0.6251208
+CMS4-CMS3  0.19958333 -0.2005505 0.59971712 0.5704726
+
+Analysing Gene: ENSG00000101384.11 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   18.5   6.168   10.27 1.98e-06 ***
+Residuals   273  163.9   0.600                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr        upr     p adj
+CMS2-CMS1 -0.48423836 -0.85319313 -0.1152836 0.0043958
+CMS3-CMS1 -0.06250439 -0.50503430  0.3800255 0.9833307
+CMS4-CMS1  0.09470889 -0.29083504  0.4802528 0.9206524
+CMS3-CMS2  0.42173397  0.05930988  0.7841581 0.0151629
+CMS4-CMS2  0.57894724  0.28883932  0.8690552 0.0000029
+CMS4-CMS3  0.15721328 -0.22208569  0.5365122 0.7072535
+
+Analysing Gene: ENSG00000169248.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  238.5   79.51   25.89 9.07e-15 ***
+Residuals   273  838.4    3.07                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff         lwr        upr     p adj
+CMS2-CMS1 -2.6178542 -3.45227659 -1.7834318 0.0000000
+CMS3-CMS1 -2.1604884 -3.16130721 -1.1596697 0.0000003
+CMS4-CMS1 -1.2056174 -2.07755753 -0.3336773 0.0023353
+CMS3-CMS2  0.4573658 -0.36228690  1.2770184 0.4740486
+CMS4-CMS2  1.4122368  0.75613325  2.0683404 0.0000004
+CMS4-CMS3  0.9548711  0.09705441  1.8126877 0.0223411
+
+Analysing Gene: ENSG00000112116.9 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  450.8  150.28   13.15 4.81e-08 ***
+Residuals   273 3120.1   11.43                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff          lwr        upr     p adj
+CMS2-CMS1  3.6282066  2.018557358  5.2378559 0.0000001
+CMS3-CMS1  2.8768231  0.946185540  4.8074607 0.0008381
+CMS4-CMS1  1.6890767  0.007053498  3.3710999 0.0486058
+CMS3-CMS2 -0.7513835 -2.332541148  0.8297741 0.6093471
+CMS4-CMS2 -1.9391299 -3.204791844 -0.6734680 0.0005511
+CMS4-CMS3 -1.1877464 -2.842524574  0.4670318 0.2499395
+
+Analysing Gene: ENSG00000077782.19 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  245.4   81.79   93.22 <2e-16 ***
+Residuals   273  239.5    0.88                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1 -0.8680442 -1.3140248 -0.42206360 0.0000053
+CMS3-CMS1 -1.3186708 -1.8535866 -0.78375497 0.0000000
+CMS4-CMS1  1.1048837  0.6388507  1.57091673 0.0000000
+CMS3-CMS2 -0.4506266 -0.8887131 -0.01254012 0.0411218
+CMS4-CMS2  1.9729279  1.6222548  2.32360097 0.0000000
+CMS4-CMS3  2.4235545  1.9650702  2.88203883 0.0000000
+
+Analysing Gene: ENSG00000186081.11 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  194.9   64.96   8.026 3.82e-05 ***
+Residuals   273 2209.6    8.09                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.4680025 -2.8225931 -0.1134119 0.0277796
+CMS3-CMS1 -0.3410706 -1.9657870  1.2836458 0.9484581
+CMS4-CMS1  0.4748682 -0.9406282  1.8903647 0.8217849
+CMS3-CMS2  1.1269319 -0.2036818  2.4575456 0.1287903
+CMS4-CMS2  1.9428707  0.8777606  3.0079809 0.0000228
+CMS4-CMS3  0.8159388 -0.5766298  2.2085074 0.4301497
+
+Analysing Gene: ENSG00000124469.10 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  332.8  110.94   15.77 1.75e-09 ***
+Residuals   273 1920.9    7.04                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1  3.2595189  1.9965137  4.52252414 0.0000000
+CMS3-CMS1  3.0564178  1.5415503  4.57128526 0.0000022
+CMS4-CMS1  2.2339819  0.9141887  3.55377505 0.0001013
+CMS3-CMS2 -0.2031011 -1.4437505  1.03754825 0.9744866
+CMS4-CMS2 -1.0255370 -2.0186339 -0.03244016 0.0399841
+CMS4-CMS3 -0.8224359 -2.1208513  0.47597958 0.3594154
+
+Analysing Gene: ENSG00000039068.18 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  14.05   4.683   13.05 5.47e-08 ***
+Residuals   273  97.99   0.359                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff         lwr         upr     p adj
+CMS2-CMS1  0.6501972  0.36493540  0.93545895 0.0000001
+CMS3-CMS1  0.2595374 -0.08260989  0.60168466 0.2055349
+CMS4-CMS1  0.4391424  0.14105448  0.73723023 0.0009891
+CMS3-CMS2 -0.3906598 -0.67087229 -0.11044730 0.0021001
+CMS4-CMS2 -0.2110548 -0.43535522  0.01324558 0.0734840
+CMS4-CMS3  0.1796050 -0.11365454  0.47286448 0.3899572
+
+Analysing Gene: ENSG00000169245.5 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  321.8  107.28    42.4 <2e-16 ***
+Residuals   273  690.7    2.53                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -2.81877875 -3.5761331 -2.0614245 0.0000000
+CMS3-CMS1 -2.73715987 -3.6455420 -1.8287777 0.0000000
+CMS4-CMS1 -1.09689478 -1.8883017 -0.3054879 0.0022648
+CMS3-CMS2  0.08161888 -0.6623299  0.8255676 0.9920313
+CMS4-CMS2  1.72188398  1.1263788  2.3173892 0.0000000
+CMS4-CMS3  1.64026510  0.8616772  2.4188529 0.0000007
+
+Analysing Gene: ENSG00000115008.5 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)   
+paper_res     3   57.6  19.191   5.508 0.0011 **
+Residuals   273  951.2   3.484                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff         lwr       upr     p adj
+CMS2-CMS1 -0.63192586 -1.52066809 0.2568164 0.2578224
+CMS3-CMS1  0.63531482 -0.43065600 1.7012856 0.4146934
+CMS4-CMS1  0.09178827 -0.83691408 1.0204906 0.9941406
+CMS3-CMS2  1.26724068  0.39422964 2.1402517 0.0012198
+CMS4-CMS2  0.72371413  0.02489903 1.4225292 0.0391667
+CMS4-CMS3 -0.54352655 -1.45718599 0.3701329 0.4163808
+
+Analysing Gene: ENSG00000277632.1 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  230.7   76.88   47.95 <2e-16 ***
+Residuals   273  437.8    1.60                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -2.1387809 -2.7417127 -1.5358491 0.0000000
+CMS3-CMS1 -2.0374991 -2.7606646 -1.3143336 0.0000000
+CMS4-CMS1 -0.4397672 -1.0698084  0.1902739 0.2735214
+CMS3-CMS2  0.1012818 -0.4909778  0.6935414 0.9710939
+CMS4-CMS2  1.6990136  1.2249303  2.1730969 0.0000000
+CMS4-CMS3  1.5977318  0.9778959  2.2175677 0.0000000
+
+Analysing Gene: ENSG00000134982.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   29.4   9.799   19.36 2.06e-11 ***
+Residuals   273  138.1   0.506                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -0.71886765 -1.0575670 -0.3801683 0.0000006
+CMS3-CMS1 -0.55704087 -0.9632819 -0.1507998 0.0025950
+CMS4-CMS1 -0.04240569 -0.3963338  0.3115224 0.9896810
+CMS3-CMS2  0.16182678 -0.1708774  0.4945309 0.5909307
+CMS4-CMS2  0.67646196  0.4101438  0.9427801 0.0000000
+CMS4-CMS3  0.51463518  0.1664399  0.8628304 0.0009437
+
+Analysing Gene: ENSG00000122359.17 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3   0.91  0.3050   1.063  0.365
+Residuals   272  78.00  0.2868               
+1 observation deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                  diff        lwr       upr     p adj
+CMS2-CMS1 -0.147308913 -0.4025943 0.1079765 0.4439486
+CMS3-CMS1 -0.050062891 -0.3558937 0.2557679 0.9744896
+CMS4-CMS1 -0.149013244 -0.4154613 0.1174348 0.4720249
+CMS3-CMS2  0.097246022 -0.1535315 0.3480235 0.7481264
+CMS4-CMS2 -0.001704331 -0.2025809 0.1991722 0.9999962
+CMS4-CMS3 -0.098950353 -0.3610825 0.1631818 0.7633645
+
+Analysing Gene: ENSG00000122786.19 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3    318  105.99   120.1 <2e-16 ***
+Residuals   273    241    0.88                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff       lwr        upr     p adj
+CMS2-CMS1 -0.5667796 -1.014096 -0.1194629 0.0065097
+CMS3-CMS1 -1.4412408 -1.977759 -0.9047224 0.0000000
+CMS4-CMS1  1.5318784  1.064449  1.9993076 0.0000000
+CMS3-CMS2 -0.8744612 -1.313860 -0.4350623 0.0000031
+CMS4-CMS2  2.0986580  1.746934  2.4503816 0.0000000
+CMS4-CMS3  2.9731192  2.513261  3.4329770 0.0000000
+
+Analysing Gene: ENSG00000139292.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   66.9  22.315   7.101 0.000131 ***
+Residuals   273  857.9   3.143                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr       upr     p adj
+CMS2-CMS1  1.4818517  0.6377887 2.3259146 0.0000502
+CMS3-CMS1  0.8980627 -0.1143191 1.9104446 0.1021532
+CMS4-CMS1  1.1802171  0.2982029 2.0622313 0.0035018
+CMS3-CMS2 -0.5837889 -1.4129116 0.2453337 0.2660957
+CMS4-CMS2 -0.3016346 -0.9653185 0.3620494 0.6432756
+CMS4-CMS3  0.2821544 -0.5855732 1.1498819 0.8350710
+
+Analysing Gene: ENSG00000111371.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3   1.68  0.5607   1.908  0.128
+Residuals   273  80.21  0.2938               
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1  0.13088492 -0.1272003 0.38897017 0.5567565
+CMS3-CMS1 -0.08888706 -0.3984384 0.22066428 0.8798964
+CMS4-CMS1  0.02793543 -0.2417540 0.29762486 0.9932711
+CMS3-CMS2 -0.21977198 -0.4732890 0.03374504 0.1149452
+CMS4-CMS2 -0.10294948 -0.3058811 0.09998211 0.5564718
+CMS4-CMS3  0.11682249 -0.1484986 0.38214355 0.6662399
+
+Analysing Gene: ENSG00000108821.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  440.5  146.82   90.73 <2e-16 ***
+Residuals   273  441.8    1.62                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.3375104 -1.9431948 -0.7318260 0.0000002
+CMS3-CMS1 -2.0988072 -2.8252742 -1.3723402 0.0000000
+CMS4-CMS1  1.2165202  0.5836027  1.8494377 0.0000071
+CMS3-CMS2 -0.7612968 -1.3562603 -0.1663334 0.0058499
+CMS4-CMS2  2.5540306  2.0777830  3.0302783 0.0000000
+CMS4-CMS3  3.3153275  2.6926618  3.9379931 0.0000000
+
+Analysing Gene: ENSG00000120217.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  210.3   70.10   54.63 <2e-16 ***
+Residuals   273  350.3    1.28                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -2.4630474 -3.0024278 -1.9236669 0.0000000
+CMS3-CMS1 -2.2419708 -2.8889118 -1.5950298 0.0000000
+CMS4-CMS1 -1.2449426 -1.8085750 -0.6813103 0.0000002
+CMS3-CMS2  0.2210766 -0.3087565  0.7509097 0.7029099
+CMS4-CMS2  1.2181047  0.7939917  1.6422178 0.0000000
+CMS4-CMS3  0.9970281  0.4425254  1.5515309 0.0000309
+
+Analysing Gene: ENSG00000066468.20 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  148.9   49.63   21.91 9.57e-13 ***
+Residuals   273  618.3    2.26                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.5247510 -2.2412834 -0.8082185 0.0000005
+CMS3-CMS1  0.2154079 -0.6440119  1.0748277 0.9162238
+CMS4-CMS1 -0.2273583 -0.9761079  0.5213913 0.8612723
+CMS3-CMS2  1.7401589  1.0363094  2.4440083 0.0000000
+CMS4-CMS2  1.2973927  0.7339856  1.8607998 0.0000000
+CMS4-CMS3 -0.4427662 -1.1793877  0.2938553 0.4069836
+
+Analysing Gene: ENSG00000100453.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  173.7   57.89   21.21 2.22e-12 ***
+Residuals   273  745.2    2.73                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1  0.1598338 -0.6267981  0.94646570 0.9529413
+CMS3-CMS1 -2.1744251 -3.1179232 -1.23092698 0.0000000
+CMS4-CMS1 -0.3969114 -1.2189122  0.42508948 0.5967597
+CMS3-CMS2 -2.3342589 -3.1069670 -1.56155083 0.0000000
+CMS4-CMS2 -0.5567452 -1.1752713  0.06178088 0.0945083
+CMS4-CMS3  1.7775137  0.9688275  2.58620001 0.0000002
+
+Analysing Gene: ENSG00000114013.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  252.2   84.06    69.1 <2e-16 ***
+Residuals   273  332.1    1.22                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr        upr     p adj
+CMS2-CMS1 -1.75846362 -2.2836255 -1.2333017 0.0000000
+CMS3-CMS1 -1.73505424 -2.3649414 -1.1051671 0.0000000
+CMS4-CMS1  0.24043762 -0.3083369  0.7892122 0.6697316
+CMS3-CMS2  0.02340938 -0.4924569  0.5392757 0.9994217
+CMS4-CMS2  1.99890124  1.5859681  2.4118343 0.0000000
+CMS4-CMS3  1.97549186  1.4356062  2.5153775 0.0000000
+
+Analysing Gene: ENSG00000141510.15 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)  
+paper_res     3    8.6   2.866   2.264 0.0813 .
+Residuals   273  345.6   1.266                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                 diff        lwr          upr     p adj
+CMS2-CMS1 -0.06169675 -0.5973911  0.473997583 0.9908096
+CMS3-CMS1  0.33488910 -0.3076308  0.977408944 0.5336403
+CMS4-CMS1 -0.21627967 -0.7760602  0.343500842 0.7502492
+CMS3-CMS2  0.39658584 -0.1296264  0.922798109 0.2105579
+CMS4-CMS2 -0.15458292 -0.5757976  0.266631767 0.7785566
+CMS4-CMS3 -0.55116877 -1.1018821 -0.000455452 0.0497224
+
+Analysing Gene: ENSG00000122691.12 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  365.5  121.85   80.38 <2e-16 ***
+Residuals   273  413.8    1.52                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -0.9022388 -1.4884518 -0.3160258 0.0005135
+CMS3-CMS1 -1.9034230 -2.6065357 -1.2003104 0.0000000
+CMS4-CMS1  1.3046827  0.6921121  1.9172533 0.0000005
+CMS3-CMS2 -1.0011842 -1.5770209 -0.4253475 0.0000608
+CMS4-CMS2  2.2069215  1.7459841  2.6678588 0.0000000
+CMS4-CMS3  3.2081057  2.6054574  3.8107540 0.0000000
+
+Analysing Gene: ENSG00000135914.5 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  701.1  233.70   61.77 <2e-16 ***
+Residuals   273 1032.9    3.78                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.5102490 -2.4363775 -0.5841204 0.0001981
+CMS3-CMS1 -1.9991389 -3.1099514 -0.8883264 0.0000303
+CMS4-CMS1  1.9294854  0.9617157  2.8972550 0.0000029
+CMS3-CMS2 -0.4888899 -1.3986255  0.4208457 0.5072332
+CMS4-CMS2  3.4397344  2.7115225  4.1679462 0.0000000
+CMS4-CMS3  3.9286243  2.9765304  4.8807182 0.0000000
+
+Analysing Gene: ENSG00000145113.21 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+paper_res     3  354.4  118.15   23.08 2.4e-13 ***
+Residuals   273 1397.5    5.12                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff         lwr        upr     p adj
+CMS2-CMS1 -1.8848397 -2.96212828 -0.8075512 0.0000537
+CMS3-CMS1  1.3602115  0.06809536  2.6523276 0.0347338
+CMS4-CMS1 -0.9274905 -2.05321672  0.1982357 0.1462968
+CMS3-CMS2  3.2450512  2.18683121  4.3032712 0.0000000
+CMS4-CMS2  0.9573492  0.11028075  1.8044177 0.0196384
+CMS4-CMS3 -2.2877020 -3.39519394 -1.1802101 0.0000012
+
+Analysing Gene: ENSG00000100985.7 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)    
+paper_res     3  310.1  103.36   46.68 <2e-16 ***
+Residuals   273  604.5    2.21                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1 -1.0376165 -1.7461547 -0.3290783 0.0010771
+CMS3-CMS1 -1.3769948 -2.2268262 -0.5271634 0.0002212
+CMS4-CMS1  1.2420248  0.5016289  1.9824207 0.0001196
+CMS3-CMS2 -0.3393783 -1.0353750  0.3566185 0.5889264
+CMS4-CMS2  2.2796413  1.7225201  2.8367626 0.0000000
+CMS4-CMS3  2.6190196  1.8906164  3.3474227 0.0000000
+
+Analysing Gene: ENSG00000198286.9 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  103.1   34.36   9.492 5.52e-06 ***
+Residuals   273  988.3    3.62                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff        lwr        upr     p adj
+CMS2-CMS1  0.5103367 -0.3955869  1.4162602 0.4655571
+CMS3-CMS1 -0.7698166 -1.8563950  0.3167617 0.2608553
+CMS4-CMS1  1.0755774  0.1289213  2.0222336 0.0187593
+CMS3-CMS2 -1.2801533 -2.1700415 -0.3902650 0.0013821
+CMS4-CMS2  0.5652408 -0.1470839  1.2775655 0.1720472
+CMS4-CMS3  1.8453940  0.9140716  2.7767165 0.0000034
+
+Analysing Gene: ENSG00000141736.13 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3   1.64  0.5450   1.082  0.357
+Residuals   271 136.55  0.5039               
+2 observations deleted due to missingness
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                  diff        lwr       upr     p adj
+CMS2-CMS1  0.131335722 -0.2070616 0.4697331 0.7476156
+CMS3-CMS1  0.281809803 -0.1235888 0.6872084 0.2770136
+CMS4-CMS1  0.137350840 -0.2165429 0.4912446 0.7476123
+CMS3-CMS2  0.150474081 -0.1819477 0.4828959 0.6462151
+CMS4-CMS2  0.006015118 -0.2611872 0.2732174 0.9999291
+CMS4-CMS3 -0.144458963 -0.4926433 0.2037254 0.7065872
+
+Analysing Gene: ENSG00000026508.16 
+
+--- ANOVA Summary ---
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3  13.57   4.525   10.67 1.18e-06 ***
+Residuals   273 115.76   0.424                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+--- Tukey HSD ---
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = CMS_GeneEx1)
+
+$paper_res
+                diff         lwr         upr     p adj
+CMS2-CMS1 -0.6013466 -0.91139855 -0.29129462 0.0000057
+CMS3-CMS1 -0.1457357 -0.51761672  0.22614527 0.7419687
+CMS4-CMS1 -0.3893206 -0.71331330 -0.06532792 0.0112042
+CMS3-CMS2  0.4556109  0.15104697  0.76017474 0.0007911
+CMS4-CMS2  0.2120260 -0.03176686  0.45581882 0.1130966
+CMS4-CMS3 -0.2435849 -0.56232961  0.07515985 0.1998422
+
+
+> sink()

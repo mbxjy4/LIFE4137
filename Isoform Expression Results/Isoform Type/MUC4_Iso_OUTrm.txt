@@ -1,0 +1,305 @@
+
+> for (type in iso_type) {
++   print("###########################################################################")
++   print("Differential isoform ex ..." ... [TRUNCATED] 
+[1] "###########################################################################"
+[1] "Differential isoform expression between CMS subtypes for all TCGA tumour samples"
+[1] "High"
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   4668  1556.1   7.449 8.21e-05 ***
+Residuals   273  57029   208.9                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = FinalDF1)
+
+$paper_res
+               diff         lwr       upr     p adj
+CMS2-CMS1 -5.112643 -11.9943904  1.769105 0.2218668
+CMS3-CMS1  7.059440  -1.1946312 15.313512 0.1228584
+CMS4-CMS1 -0.586007  -7.7771755  6.605161 0.9966898
+CMS3-CMS2 12.172083   5.4121463 18.932020 0.0000300
+CMS4-CMS2  4.526636  -0.8844596  9.937731 0.1364744
+CMS4-CMS3 -7.645448 -14.7201350 -0.570760 0.0284043
+
+[1] "###########################################################################"
+[1] "Differential isoform expression between CMS subtypes for all TCGA tumour samples"
+[1] "Low"
+             Df Sum Sq Mean Sq F value Pr(>F)
+paper_res     3     62   20.63   1.149   0.33
+Residuals   273   4900   17.95               
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = FinalDF1)
+
+$paper_res
+                diff        lwr       upr     p adj
+CMS2-CMS1 -1.2146310 -3.2318657 0.8026038 0.4053981
+CMS3-CMS1 -1.0850179 -3.5045196 1.3344839 0.6530860
+CMS4-CMS1 -0.3918107 -2.4997455 1.7161240 0.9633682
+CMS3-CMS2  0.1296131 -1.8519156 2.1111418 0.9982778
+CMS4-CMS2  0.8228202 -0.7633249 2.4089653 0.5376683
+CMS4-CMS3  0.6932071 -1.3805838 2.7669981 0.8233640
+
+[1] "###########################################################################"
+[1] "Differential isoform expression between CMS subtypes for all TCGA tumour samples"
+[1] "Non"
+             Df Sum Sq Mean Sq F value   Pr(>F)    
+paper_res     3   5717  1905.8   7.856 4.78e-05 ***
+Residuals   273  66223   242.6                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = formula, data = FinalDF1)
+
+$paper_res
+                diff        lwr         upr     p adj
+CMS2-CMS1   8.428098   1.012370 15.84382645 0.0187118
+CMS3-CMS1  -4.117720 -13.012256  4.77681590 0.6294605
+CMS4-CMS1   2.576359  -5.172799 10.32551723 0.8257074
+CMS3-CMS2 -12.545818 -19.830284 -5.26135242 0.0000730
+CMS4-CMS2  -5.851739 -11.682702 -0.02077653 0.0488132
+CMS4-CMS3   6.694079  -0.929560 14.31771836 0.1077168
+
+
+> sink()
+
+> for (type in iso_type) {
++   #pivot wider the df based off of the sample and type
++   print("####################################################### ..." ... [TRUNCATED] 
+[1] "##############################################################################"
+[1] "Pairwise T Test between tumour and normal TCGA samples for type of isoform expression"
+[1] "High"
+
+	Paired t-test
+
+data:  wide_df$Tumour and wide_df$Normal
+t = -3.6397, df = 27, p-value = 0.001139
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -16.124245  -4.498374
+sample estimates:
+mean difference 
+      -10.31131 
+
+[1] "##############################################################################"
+[1] "Pairwise T Test between tumour and normal TCGA samples for type of isoform expression"
+[1] "Low"
+
+	Paired t-test
+
+data:  wide_df$Tumour and wide_df$Normal
+t = 0.23019, df = 27, p-value = 0.8197
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -1.478148  1.851719
+sample estimates:
+mean difference 
+      0.1867857 
+
+[1] "##############################################################################"
+[1] "Pairwise T Test between tumour and normal TCGA samples for type of isoform expression"
+[1] "Non"
+
+	Paired t-test
+
+data:  wide_df$Tumour and wide_df$Normal
+t = 3.9357, df = 27, p-value = 0.0005246
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+  4.846061 15.402511
+sample estimates:
+mean difference 
+       10.12429 
+
+
+> sink()
+
+> for (type in iso_type) {
++   # Run t-test
++   print("######################################################################")
++   print("T Test betw ..." ... [TRUNCATED] 
+[1] "######################################################################"
+[1] "T Test between normal GTEx samples and CMS subtype for Iso:"
+[1] "High"
+[1] "CMS1"
+[1] "High"
+
+	Welch Two Sample t-test
+
+data:  CMS1[[type]] by CMS1$paper_res
+t = 1.4305, df = 54.391, p-value = 0.1583
+alternative hypothesis: true difference in means between group CMS1 and group Normal is not equal to 0
+95 percent confidence interval:
+ -1.400649  8.381660
+sample estimates:
+  mean in group CMS1 mean in group Normal 
+            22.57508             19.08458 
+
+[1] "CMS2"
+[1] "High"
+
+	Welch Two Sample t-test
+
+data:  CMS2[[type]] by CMS2$paper_res
+t = -0.90292, df = 205.78, p-value = 0.3676
+alternative hypothesis: true difference in means between group CMS2 and group Normal is not equal to 0
+95 percent confidence interval:
+ -5.164138  1.919863
+sample estimates:
+  mean in group CMS2 mean in group Normal 
+            17.46244             19.08458 
+
+[1] "CMS3"
+[1] "High"
+
+	Welch Two Sample t-test
+
+data:  CMS3[[type]] by CMS3$paper_res
+t = 5.3866, df = 70.158, p-value = 9.071e-07
+alternative hypothesis: true difference in means between group CMS3 and group Normal is not equal to 0
+95 percent confidence interval:
+  6.643907 14.455985
+sample estimates:
+  mean in group CMS3 mean in group Normal 
+            29.63452             19.08458 
+
+[1] "CMS4"
+[1] "High"
+
+	Welch Two Sample t-test
+
+data:  CMS4[[type]] by CMS4$paper_res
+t = 1.623, df = 155.06, p-value = 0.1066
+alternative hypothesis: true difference in means between group CMS4 and group Normal is not equal to 0
+95 percent confidence interval:
+ -0.6305518  6.4395485
+sample estimates:
+  mean in group CMS4 mean in group Normal 
+            21.98908             19.08458 
+
+[1] "######################################################################"
+[1] "T Test between normal GTEx samples and CMS subtype for Iso:"
+[1] "Low"
+[1] "CMS1"
+[1] "Low"
+
+	Welch Two Sample t-test
+
+data:  CMS1[[type]] by CMS1$paper_res
+t = 3.8677, df = 41.147, p-value = 0.0003839
+alternative hypothesis: true difference in means between group CMS1 and group Normal is not equal to 0
+95 percent confidence interval:
+ 1.251243 3.985242
+sample estimates:
+  mean in group CMS1 mean in group Normal 
+           3.4845417            0.8662987 
+
+[1] "CMS2"
+[1] "Low"
+
+	Welch Two Sample t-test
+
+data:  CMS2[[type]] by CMS2$paper_res
+t = 3.4225, df = 128.65, p-value = 0.0008324
+alternative hypothesis: true difference in means between group CMS2 and group Normal is not equal to 0
+95 percent confidence interval:
+ 0.5921767 2.2150473
+sample estimates:
+  mean in group CMS2 mean in group Normal 
+           2.2699107            0.8662987 
+
+[1] "CMS3"
+[1] "Low"
+
+	Welch Two Sample t-test
+
+data:  CMS3[[type]] by CMS3$paper_res
+t = 3.6435, df = 47.22, p-value = 0.0006674
+alternative hypothesis: true difference in means between group CMS3 and group Normal is not equal to 0
+95 percent confidence interval:
+ 0.6867642 2.3796860
+sample estimates:
+  mean in group CMS3 mean in group Normal 
+           2.3995238            0.8662987 
+
+[1] "CMS4"
+[1] "Low"
+
+	Welch Two Sample t-test
+
+data:  CMS4[[type]] by CMS4$paper_res
+t = 4.0443, df = 88.942, p-value = 0.0001115
+alternative hypothesis: true difference in means between group CMS4 and group Normal is not equal to 0
+95 percent confidence interval:
+ 1.132556 3.320309
+sample estimates:
+  mean in group CMS4 mean in group Normal 
+           3.0927309            0.8662987 
+
+[1] "######################################################################"
+[1] "T Test between normal GTEx samples and CMS subtype for Iso:"
+[1] "Non"
+[1] "CMS1"
+[1] "Non"
+
+	Welch Two Sample t-test
+
+data:  CMS1[[type]] by CMS1$paper_res
+t = -2.0646, df = 53.115, p-value = 0.04386
+alternative hypothesis: true difference in means between group CMS1 and group Normal is not equal to 0
+95 percent confidence interval:
+ -12.3837577  -0.1792867
+sample estimates:
+  mean in group CMS1 mean in group Normal 
+            71.22796             77.50948 
+
+[1] "CMS2"
+[1] "Non"
+
+	Welch Two Sample t-test
+
+data:  CMS2[[type]] by CMS2$paper_res
+t = 1.0998, df = 238.62, p-value = 0.2725
+alternative hypothesis: true difference in means between group CMS2 and group Normal is not equal to 0
+95 percent confidence interval:
+ -1.698346  5.991498
+sample estimates:
+  mean in group CMS2 mean in group Normal 
+            79.65606             77.50948 
+
+[1] "CMS3"
+[1] "Non"
+
+	Welch Two Sample t-test
+
+data:  CMS3[[type]] by CMS3$paper_res
+t = -4.6855, df = 75.918, p-value = 1.202e-05
+alternative hypothesis: true difference in means between group CMS3 and group Normal is not equal to 0
+95 percent confidence interval:
+ -14.81971  -5.97877
+sample estimates:
+  mean in group CMS3 mean in group Normal 
+            67.11024             77.50948 
+
+[1] "CMS4"
+[1] "Non"
+
+	Welch Two Sample t-test
+
+data:  CMS4[[type]] by CMS4$paper_res
+t = -1.8921, df = 179.79, p-value = 0.06009
+alternative hypothesis: true difference in means between group CMS4 and group Normal is not equal to 0
+95 percent confidence interval:
+ -7.5692436  0.1589171
+sample estimates:
+  mean in group CMS4 mean in group Normal 
+            73.80432             77.50948 
+
+
+> sink()

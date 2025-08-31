@@ -168,7 +168,7 @@ for (gene in gene_cols) {
 
 #sink()
 
-#Visualising - replace ENSG number & Gene ID to create sep. graph for each protein
+#Visualising - replace ENSG number & Gene ID to create sep. graph for each gene
 ggplot(CMS_GeneEx1, aes(x = paper_res, y = ENSG00000108821.13, fill = paper_res)) +
   geom_boxplot(outlier.shape = NA, notch = TRUE) +
   labs(title = paste("COL1A1 CMS Gene Expression"),
@@ -179,3 +179,4 @@ ggplot(CMS_GeneEx1, aes(x = paper_res, y = ENSG00000108821.13, fill = paper_res)
 
 #Save each plot (change name)
 ggsave(filename = "COL1A1_Gene_Ex.png")
+

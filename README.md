@@ -32,7 +32,7 @@ Script used: [Gene_Ex_outlierRM.R](https://github.com/mbxjy4/LIFE4137/blob/main/
 <!-- TOC --><a name="isoform-proportion-analysis-preperation-in-ada"></a>
 ## Isoform Proportion Analysis Preperation in Ada
 
-Isoform proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for. 
+Isoform proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for using [GTEx_TCGA_CR_Samples.txt](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/GTEx_TCGA_CR_Samples.txt)
 
 Scripts Used:
 [iso_prop_GTEx_TCGA.R](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/Isoform%20Analysis%20Preperation/iso_prop_GTEx_TCGA.R)

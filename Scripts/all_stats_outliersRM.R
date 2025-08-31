@@ -1,11 +1,3 @@
-#Lines to Edit: 
-#26 - GOI Symbol
-#83 - GOI Symbol for .txt file
-#146 - GOI Symbol for .txt file
-#178 - GOI Symbol for .txt file
-#219 - Use Canonical ENST ID for GOI
-#253 - GOI Symbol for .txt file
-
 #Load packages
 library(biomaRt)
 library(tidyr)
@@ -17,30 +9,21 @@ library(ggplot2)
 ###########################################################################################
 
 #Load ensembl
-#ensembl <- useEnsembl(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
+ensembl <- useEnsembl(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
 
 #Get transcript table - ALL TRANSCRIPTS (inc. non-coding)
 goi_df <- getBM(
   attributes = c('ensembl_gene_id', 'ensembl_transcript_id', 'ccds',
                  'transcript_biotype', 'transcript_version'),
   filters = 'hgnc_symbol',
-  values = 'MUC4',
+  values = 'ZEB1',
   mart = ensembl
 )
-
-##Get transcript table - PROTEIN CODING ONLY
-#goi_df2 <- getBM(
- # attributes = c('ensembl_gene_id', 'ensembl_transcript_id', 'ccds', 'transcript_biotype', 'transcript_version', 'uniprotswissprot'),
-  #filters = 'hgnc_symbol',
-  #values = 'MUC4',
-  #mart = ensembl
-#)
 
 
 #get list of ENST transcripts
 transcripts <-goi_df$ensembl_transcript_id
-#Specific for MUC4 - erroneous isoform included in GOI DF
-#transcripts <- transcripts[transcripts != "ENST00000533301"]
+
 
 #Load in iso prop table and cms subtype info for samples
 Iso_prop <- read.table("GTEx_TCGA_samples.tsv", sep = "\t", header = TRUE, check.names = FALSE)
@@ -71,10 +54,10 @@ for (iso in iso_cols) {
   Fil_tiso_prop1[[iso]][outlier_mask] <- NA
 }
 
-#Get number of outliers for each gene
+#Get number of outliers for each gene - used to decide multiplier
 sapply(Fil_tiso_prop1[iso_cols], function(x) sum(is.na(x)))
 
-#####
+####################################
 
 
 #add -01 onto end of CMS class df samples to match fil_Tran_iso_GTEx ready for merging
@@ -118,7 +101,7 @@ CMS4 <- FinalDF %>%
 CMS4 <- droplevels(CMS4)
 
 
-#sink("MUC4_Transcripts.txt")
+sink("ZEB1_Transcripts.txt")
 
 for (iso in iso_cols) {
   # Run t-test
@@ -139,7 +122,7 @@ for (iso in iso_cols) {
   print(ttestCMS4)
 }
 
-#sink()
+sink()
 
 ###########################################################################################
 #Pairwise analysis TCGA tumour vs normal samples
@@ -177,7 +160,7 @@ FinalPairedDF <- PairedCMSDF[PairedCMSDF$shared_samples %in% paired_ids, ]
 
 #pairwise t test for samples with normal and tumour samples
 
-#sink("MUC4_Transcripts.txt", append = TRUE)
+sink("ZEB1_Transcripts.txt", append = TRUE)
 
 for (iso in iso_cols) {
   #pivot wider the df based off of the sample and type
@@ -197,7 +180,7 @@ for (iso in iso_cols) {
   print(iso)
   print(result)
 }
-#sink()
+sink()
 
 #########################################################################################
 #Differential isoform expression between CMS subtypes for all TCGA tumour samples
@@ -209,7 +192,7 @@ TumourDF <- FinalDF %>%
 #Drop factor levels
 TumourDF <- droplevels(TumourDF)
 
-#sink("MUC4_Transcripts.txt", append = TRUE)
+sink("ZEB1_Transcripts.txt", append = TRUE)
 for (iso in iso_cols) {
   print("###########################################################################")
   print("Differential isoform expression between CMS subtypes for all TCGA tumour samples")
@@ -219,7 +202,7 @@ for (iso in iso_cols) {
   print((summary(aov_res)))
   print((TukeyHSD(aov_res)))
 }
-#sink()
+sink()
 
 #######################################################################################
 #Classifying isoforms as protein/non-protein coding
@@ -237,20 +220,16 @@ FinalDF1$Non <- NA
 
 #Set row names of df goi_df to be ENST number
 rownames(goi_df) <- goi_df$ensembl_transcript_id
-#rownames(goi_df2) <- goi_df2$ensembl_transcript_id ###
 
-#High conf. protein coding vector == ENSTs that have a swissprot ID
+#High conf. protein coding vector == ENSTs that have a CCDS and are protein coding
 high_pc <- rownames(goi_df)[goi_df$transcript_biotype == "protein_coding" & startsWith(goi_df$ccds, "CCDS")]
 #Non protein coding vector = ENSTs which aren't classed as protein coding
 non_pc <- rownames(goi_df)[goi_df$transcript_biotype != "protein_coding"]
-#Low conf. protein coding vector == ENSTs which dont have a swissprot ID
+#Low conf. protein coding vector == ENSTs which are protein coding but don't have a CCDS
 low_pc <- rownames(goi_df)[goi_df$transcript_biotype == "protein_coding" & goi_df$ccds == ""]
 
 #Remove version number from ENST IDs - so that it ENSTs in vectors match ENSTs in Exp. DF
 colnames(FinalDF1) <- sub("\\..*$", "", colnames(FinalDF1))
-
-#For P_ik3ca/M_uc3 set manually
-#FinalDF$Low <- FinalDF$ENST00000475231
 
 
 #Sum the proportions of all low conf. pc ENSTs (if only one then set it directly to that)
@@ -285,7 +264,7 @@ mean(FinalDF1$Sum, na.rm = TRUE)
 #Create vector of column names for low, high, non
 iso_type <- c("High", "Low", "Non")
 
-#sink("MUC4_Iso_OUTrm.txt", append = TRUE)
+sink("ZEB1_Iso_OUTrm.txt", append = TRUE)
 for (type in iso_type) {
   print("###########################################################################")
   print("Differential isoform expression between CMS subtypes for all TCGA tumour samples")
@@ -296,7 +275,7 @@ for (type in iso_type) {
   print((TukeyHSD(aov_res)))
 }
 
-#sink()
+sink()
 
 #######################################################################################
 #Pairwise analysis for isoform subtypes
@@ -306,9 +285,6 @@ for (type in iso_type) {
 FinalPairedDF$High <- NA
 FinalPairedDF$Low <- NA
 FinalPairedDF$Non <- NA
-
-#For P_ik3ca/M_uc3 set manually
-#FinalDF$Low <- FinalDF$ENST00000475231
 
 #Remove version number from ENST IDs - so that it ENSTs in vectors match ENSTs in Exp. DF
 colnames(FinalPairedDF) <- sub("\\..*$", "", colnames(FinalPairedDF))
@@ -339,7 +315,7 @@ FinalPairedDF$Sum <- rowSums(FinalPairedDF[, c("High", "Low", "Non")], na.rm = T
 mean(FinalPairedDF$Sum, na.rm = TRUE)
 
 #Run pairwise comparison
-#sink("MUC4_Iso_OUTrm.txt", append = TRUE)
+sink("ZEB1_Iso_OUTrm.txt", append = TRUE)
 
 for (type in iso_type) {
   #pivot wider the df based off of the sample and type
@@ -358,7 +334,7 @@ for (type in iso_type) {
   print(type)
   print(result)
 }
-#sink()
+sink()
 
 #########################################################################################
 #CMS subtype vs GTEx normal comparison for differential expression of isoform subtypes. 
@@ -368,9 +344,6 @@ for (type in iso_type) {
 FinalDF$High <- NA
 FinalDF$Low <- NA
 FinalDF$Non <- NA
-
-#For P_ik3ca/M_uc3 set manually
-#FinalDF$Low <- FinalDF$ENST00000475231
 
 #Remove version number from ENST IDs - so that it ENSTs in vectors match ENSTs in Exp. DF
 colnames(FinalDF) <- sub("\\..*$", "", colnames(FinalDF))
@@ -417,7 +390,7 @@ CMS4 <- FinalDF %>%
   filter(paper_res == "CMS4" | paper_res == "Normal")
 CMS4 <- droplevels(CMS4)
 
-#sink("MUC4_Iso_OUTrm.txt", append = TRUE)
+sink("ZEB1_Iso_OUTrm.txt", append = TRUE)
 for (type in iso_type) {
   # Run t-test
   print("######################################################################")
@@ -441,55 +414,17 @@ for (type in iso_type) {
   print(ttestCMS4_2)
 }
 
-#sink()
+sink()
 
-sapply(Fil_tiso_prop1[iso_cols], function(x) sum(is.na(x)))
-
-mean(FinalDF1$Sum, na.rm = TRUE)
-mean(FinalPairedDF$Sum, na.rm = TRUE)
-mean(CMS1$Sum)
-mean(CMS2$Sum)
-mean(CMS3$Sum)
-mean(CMS4$Sum)
-
-intersect(non_pc, colnames(FinalDF1))
-
-#sink()
-
-ggplot(FinalDF1, aes(x = paper_res, y = High)) +
-  geom_boxplot(outlier.shape = NA) +
-  labs(title = "Expression of IDO-202 by CMS subtype",
-       y = "TPM",
-       x = "CMS Subtype") +
-  geom_jitter(width = 0.1, alpha = 0.4)
-
-ggplot(CMS2, aes(x = paper_res, y = High)) +
-  geom_boxplot(outlier.shape = NA) +
-  labs(title = "Expression of IDO-202 by CMS subtype",
-       y = "TPM",
-       x = "CMS Subtype") +
-  geom_jitter(width = 0.1, alpha = 0.4)
-
-FinalDF <- FinalDF %>%
-  filter(!is.na(paper_res))
-
-ggplot(FinalDF, aes(x = paper_res, y = High, fill = paper_res)) +
-  geom_boxplot(outlier.shape = NA, notch = TRUE) +
-  labs(title = "HCPC MUC4 Expression in Normal and CRC samples",
-       y = "Proportion of MUC4 Expression (%)",
-       x = "CMS Subtype" +
-  geom_jitter(width = 0.1, alpha = 0.4) +
-  coord_cartesian(ylim = c(25, 100)) +
-  theme_classic()
-
+#load package for creating significance bars
 library(ggsignif)
 
-  
+#create graph for HCPC
 ggplot(FinalDF, aes(x = paper_res, y = High, fill = paper_res)) +
     geom_boxplot(outlier.shape = NA, notch = TRUE) +
     geom_jitter(width = 0.1, alpha = 0.4) +
     labs(
-      title = "HCPC MUC4 Expression in Normal and CRC samples",
+      title = "HCPC ZEB1 Expression in Normal and CRC samples",
       y = "Proportion of MUC4 Expression (%)",
       x = "CMS Subtype",
       fill = "Subtype Group"
@@ -504,18 +439,6 @@ ggplot(FinalDF, aes(x = paper_res, y = High, fill = paper_res)) +
 
 ggsave("HCPC_ZEB1.png")
 
-#annotations = c("p = 0.0004", "p = 0.0004", "p = 0.008"),
-
-FinalDF %>%
-  filter(paper_res == "CMS1") %>%
-  summarise(mean_Non = mean(Non, na.rm = TRUE))
-
-FinalDF %>%
-  filter(paper_res == "CMS2") %>%
-  summarise(mean_Non = mean(Non, na.rm = TRUE))
-
-#create pairwise plot linking paired samples
-ggplot(FinalPairedDF, aes(Type, High, fill=Type)) +
-  geom_boxplot()+
   geom_point()+
   geom_line(aes(group=shared_samples))
+

@@ -63,7 +63,7 @@ Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapage
 
 Script used: [survival_CMS_specific.R](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/survival_CMS_specific.R) 
 
-Update file names and directories as appropriate. To run the code for each gene, create a new column in DF with the desired gene's ENSG ID. E.g.
+Update file names and directories as appropriate. Update CMS subtype to analyse each subtype seperately. To run the code for each gene, create a new column in DF with the desired gene's ENSG ID. E.g.
 
 ```bash
 #Create column in DF for GOI and set it to be the respective ENSG ID

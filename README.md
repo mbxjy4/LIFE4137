@@ -7,7 +7,7 @@ This Repo contains the full materials and methods including all code used in com
 
 - [Running CMSclassifier](#Running-CMSclassifier)
 - [Gene Expression Analysis](#gene-expression-analysis)
-- [Isoform Proportion Analysis Preperation in Ada](#transcript-preperation-analysis-in-ada)
+- [Isoform Proportion Analysis Preperation in Ada](#isoform-proportion-analysis-preperation-in-ada)
 - [Isoform Analysis](#isoform-analysis)
 - [Survival Analysis](#survival-analysis)
 
@@ -21,7 +21,33 @@ Gene expression data used in the modelling for CMSclassifier was downloaded from
 <!-- TOC --><a name="gene-expression-analysis"></a>
 ## Gene Expression Analysis
 
-Gene expression data was downloaded from [Xenabroser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_gene_tpm&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Data was filtered prior to loading into R to only include TCGA primary tumour samples (ending in -01). 67 genes were selected for analysis based on published literature which suggested difference in gene expression in CRC versus normal tissue or between CMS subtypes. Data was filtered to only include expression for these 67 genes and further filtered to only include samples for which I had a CMS classification for (using TCGA_CMSclass.tsv). Outliers were removed and one-way ANOVA performed with additional Tukey multiple comparisons of the means to test for signifcant difference in gene expression between each CMS subtype relationship. 31 genes showed significant difference between at least one subtype and all others and were taken forward for downstream transcriptomic and suvival analysis. 
+Gene expression data was downloaded from [Xenabroser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_gene_tpm&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Data was filtered prior to loading into R to only include TCGA primary tumour samples (ending in -01).
+
+Script used: ___________________________
+
+67 genes were selected for analysis based on published literature which suggested difference in gene expression in CRC versus normal tissue or between CMS subtypes. Data was filtered to only include expression for these 67 genes and further filtered to only include samples for which I had a CMS classification for (using TCGA_CMSclass.tsv). Outliers were removed and one-way ANOVA performed with additional Tukey multiple comparisons of the means to test for signifcant difference in gene expression between each CMS subtype relationship. 31 genes showed significant difference between at least one subtype and all others and were taken forward for downstream transcriptomic and suvival analysis.         Full results available here.
+
+<!-- TOC --><a name="isoform-proportion-analysis-preperation-in-ada"></a>
+## Isoform Proportion Analysis Preperation in Ada
+
+Isoform proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for. 
+
+Scripts Used:
+iso_prop_GTEx_TCGA.R
+iso_prop_GTEx_TCGA.sh
+
+
+This created GTEx_TCGA_samples.tsv which was used for isoform expression analysis alongside TCGA_CMSclass.tsv. Isoform proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses was then performed:
+
+1) T-tests comparing each CMS subtype expression (TCGA) for HCPC, LCPC and NPC with normal (GTEx) expression.
+2) Pairwsie T-tests comparing CRC expression (TCGA) in primary tumour samples with solid normal tissue samples from the same individual.
+3) Non-pairwise T-tests comparing expression between each CMS subtype with Tukey multiple comparisons of the means.
+
+Script Used: all_stats_outliers_removed
+
+NOTE: The above analysis was also performed on specific transcripts if isoform groups showed particular interest (e.g. MUC4 and ZEB1). This analysis is at the start of the script as it was originally conducted before realising the full scale of transcript analysis for every gene. 
+
+
 
 
 

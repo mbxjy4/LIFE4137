@@ -10,3 +10,8 @@ This Repo contains the full materials and methods including all code used in com
 - [Isoform Proportion Analysis Preperation in Ada](#transcript-preperation-analysis-in-ada)
 - [Isoform Analysis](#isoform-analysis)
 - [Survival Analysis](#survival-analysis)
+
+- <!-- TOC end --> 
+
+<!-- TOC --><a name="Running-CMSclassifier"></a>
+## Running CMSclassifier

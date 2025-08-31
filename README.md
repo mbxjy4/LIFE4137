@@ -15,3 +15,5 @@ This Repo contains the full materials and methods including all code used in com
 
 <!-- TOC --><a name="Running-CMSclassifier"></a>
 ## Running CMSclassifier
+
+Gene expression data used in the modelling for CMSclassifier was downloaded from [synapse](https://www.synapse.org/Synapse:syn4983432). RF and SS CMSclassifier methods were both run on the complete dataset in R using ____________. Only TCGA samples which matched the [described CMS class assigned in the original paper](https://www.synapse.org/Synapse:syn4978510) were reatined and saved. 

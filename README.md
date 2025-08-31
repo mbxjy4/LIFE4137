@@ -36,8 +36,11 @@ Scripts Used:
 iso_prop_GTEx_TCGA.R
 iso_prop_GTEx_TCGA.sh
 
+<!-- TOC --><a name="isoform-analysis"></a>
+## Isoform Analysis
 
-This created GTEx_TCGA_samples.tsv which was used for isoform expression analysis alongside TCGA_CMSclass.tsv. Isoform proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses was then performed:
+
+The above preparation created GTEx_TCGA_samples.tsv which was used for isoform expression analysis alongside TCGA_CMSclass.tsv. Isoform proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses was then performed:
 
 1) T-tests comparing each CMS subtype expression (TCGA) for HCPC, LCPC and NPC with normal (GTEx) expression.
 2) Pairwsie T-tests comparing CRC expression (TCGA) in primary tumour samples with solid normal tissue samples from the same individual.

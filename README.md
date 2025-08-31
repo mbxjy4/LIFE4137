@@ -1,7 +1,7 @@
 **LIFE4137**
 Materials and Methods used in Completion of LIFE4137 Individual Research Project
 
-This Repo contains the full materials and methods including all code used in completion of the individual research project. 
+This Repo contains the full materials and methods including all code used in completion of the individual research project. Ensure required files for each script are in the CWD for smooth running of code. 
 
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
@@ -48,8 +48,23 @@ The above preparation created GTEx_TCGA_samples.tsv which was used for isoform e
 
 Script Used: all_stats_outliers_removed
 
+To run the code for each specific gene, replace the gene symbol in the 'values =' condition for getBM to create the goi_df. Update file names as appropriate. 
+
 NOTE: The above analysis was also performed on specific transcripts if isoform groups showed particular interest (e.g. MUC4 and ZEB1). This analysis is at the start of the script as it was originally conducted before realising the full scale of transcript analysis for every gene. 
 
+<!-- TOC --><a name="survival-analysis"></a>
+## Survival Analysis
+
+Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TCGA_survival_data&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Code was provided by Heshmat Borhani and edited as appropriate. Due to word limitations, only DSS was evaluated.
+
+Script used: survival_CMS_specific.R 
+
+Update file names and directories as appropriate. To run the code for each gene, assign a new column with the desired gene's ENSG ID. E.g.
+
+```bash
+#Create column in DF for GOI and set it to be the respective ENSG ID
+DF$CD274 <- DF$ENSG00000120217
+```
 
 
 

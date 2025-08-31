@@ -70,6 +70,8 @@ Update file names and directories as appropriate. To run the code for each gene,
 DF$CD274 <- DF$ENSG00000120217
 ```
 
+Due to the number of results produced these are not available online however can be requested if required. 
+
 
 
 

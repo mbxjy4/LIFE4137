@@ -42,7 +42,7 @@ Scripts Used:
 ## Transcript Analysis
 
 
-The above preparation created GTEx_TCGA_samples.tsv which was used for transcript expression analysis alongside TCGA_CMSclass.tsv. Transcript proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses were then performed:
+The above preparation created GTEx_TCGA_samples.tsv (unavailable due to size) which was used for transcript expression analysis alongside TCGA_CMSclass.tsv. Transcript proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses were then performed:
 
 1) T-tests comparing each CMS subtype expression (TCGA) for HCPC, LCPC and NPC with normal (GTEx) expression.
 2) Pairwsie T-tests comparing CRC expression (TCGA) in primary tumour samples with solid normal tissue samples from the same individual.

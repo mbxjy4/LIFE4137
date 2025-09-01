@@ -7,8 +7,8 @@ This Repo contains the full materials and methods including all code used in com
 
 - [Running CMSclassifier](#Running-CMSclassifier)
 - [Gene Expression Analysis](#gene-expression-analysis)
-- [Isoform Proportion Analysis Preperation in Ada](#isoform-proportion-analysis-preperation-in-ada)
-- [Isoform Analysis](#isoform-analysis)
+- [Transcript Proportion Analysis Preperation in Ada](#transcript-proportion-analysis-preperation-in-ada)
+- [Transcript Analysis](#transcript-analysis)
 - [Survival Analysis](#survival-analysis)
 
 - <!-- TOC end --> 
@@ -29,8 +29,8 @@ Script used: [Gene_Ex_outlierRM.R](https://github.com/mbxjy4/LIFE4137/blob/main/
 
 67 genes were selected for analysis based on published literature which suggested difference in gene expression in CRC versus normal tissue or between CMS subtypes. Data was filtered to only include expression for these 67 genes and further filtered to only include samples for which I had a CMS classification for (using TCGA_CMSclass.tsv). Outliers were removed and one-way ANOVA performed with additional Tukey multiple comparisons of the means to test for signifcant difference in gene expression between each CMS subtype relationship. 31 genes showed significant difference between at least one subtype and all others and were taken forward for downstream transcriptomic and suvival analysis. Full results available [here](https://github.com/mbxjy4/LIFE4137/blob/main/Gene%20Expression%20Results/anova_tukey_results.txt).
 
-<!-- TOC --><a name="isoform-proportion-analysis-preperation-in-ada"></a>
-## Isoform Proportion Analysis Preperation in Ada
+<!-- TOC --><a name="transcript-proportion-analysis-preperation-in-ada"></a>
+## Transcript Proportion Analysis Preperation in Ada
 
 Isoform proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for using [GTEx_TCGA_CR_Samples.txt](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/GTEx_TCGA_CR_Samples.txt)
 
@@ -38,8 +38,8 @@ Scripts Used:
 [iso_prop_GTEx_TCGA.R](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/Isoform%20Analysis%20Preperation/iso_prop_GTEx_TCGA.R)
 [iso_prop_GTEx_TCGA.sh](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/Isoform%20Analysis%20Preperation/iso_prop_GTEx_TCGA.sh)
 
-<!-- TOC --><a name="isoform-analysis"></a>
-## Isoform Analysis
+<!-- TOC --><a name="transcript-analysis"></a>
+## Transcript Analysis
 
 
 The above preparation created GTEx_TCGA_samples.tsv which was used for isoform expression analysis alongside TCGA_CMSclass.tsv. Isoform proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses was then performed:

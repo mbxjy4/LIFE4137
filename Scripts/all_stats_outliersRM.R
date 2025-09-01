@@ -439,6 +439,5 @@ ggplot(FinalDF, aes(x = paper_res, y = High, fill = paper_res)) +
 
 ggsave("HCPC_ZEB1.png")
 
-  geom_point()+
-  geom_line(aes(group=shared_samples))
+
 

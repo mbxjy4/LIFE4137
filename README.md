@@ -59,7 +59,7 @@ Full results available [here](https://github.com/mbxjy4/LIFE4137/tree/main/Isofo
 <!-- TOC --><a name="survival-analysis"></a>
 ## Survival Analysis
 
-Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TCGA_survival_data&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). This data was into a single DF with [TCGA Gene expression data](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/TCGA_gene_ex.tsv). Survival code was provided by Heshmat Borhani with minor edits performed. Due to word limitations, only DSS was evaluated.
+Survival data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TCGA_survival_data&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). This data was into a single DF with [TCGA Gene expression data](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/TCGA_gene_ex.tsv) which was created during gene expression analysis. Survival code was provided by Heshmat Borhani with minor edits performed. Due to word limitations, only DSS was evaluated.
 
 Script used: [survival_CMS_specific.R](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/survival_CMS_specific.R) 
 

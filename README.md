@@ -32,7 +32,7 @@ Script used: [Gene_Ex_outlierRM.R](https://github.com/mbxjy4/LIFE4137/blob/main/
 <!-- TOC --><a name="transcript-proportion-analysis-preperation-in-ada"></a>
 ## Transcript Proportion Analysis Preperation in Ada
 
-Isoform proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for using [GTEx_TCGA_CR_Samples.txt](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/GTEx_TCGA_CR_Samples.txt)
+Transcript proportion data was downloaded from [Xenabrowser](https://xenabrowser.net/datapages/?dataset=TcgaTargetGtex_rsem_isopct&host=https%3A%2F%2Ftoil.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443). Due to the size of the file, the data was trimmed down using Ada to remove TCGA samples which I didn't have a CMS classification for using [GTEx_TCGA_CR_Samples.txt](https://github.com/mbxjy4/LIFE4137/blob/main/Additional%20Files/GTEx_TCGA_CR_Samples.txt)
 
 Scripts Used:
 [iso_prop_GTEx_TCGA.R](https://github.com/mbxjy4/LIFE4137/blob/main/Scripts/Isoform%20Analysis%20Preperation/iso_prop_GTEx_TCGA.R)
@@ -42,7 +42,7 @@ Scripts Used:
 ## Transcript Analysis
 
 
-The above preparation created GTEx_TCGA_samples.tsv which was used for isoform expression analysis alongside TCGA_CMSclass.tsv. Isoform proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses were then performed:
+The above preparation created GTEx_TCGA_samples.tsv which was used for transcript expression analysis alongside TCGA_CMSclass.tsv. Transcript proportion data was filtered to only include transcripts for each GOI which were then classified as HCPC, LCPC or NPC. Three seperate analyses were then performed:
 
 1) T-tests comparing each CMS subtype expression (TCGA) for HCPC, LCPC and NPC with normal (GTEx) expression.
 2) Pairwsie T-tests comparing CRC expression (TCGA) in primary tumour samples with solid normal tissue samples from the same individual.
@@ -52,7 +52,7 @@ Script Used: [all_stats_outliersRM.R](https://github.com/mbxjy4/LIFE4137/blob/ma
 
 To run the code for each specific gene, replace the gene symbol in the 'values =' condition for getBM to create the goi_df. Update file names as appropriate. 
 
-NOTE: The above analysis was also performed on specific transcripts if isoform groups showed particular interest (e.g. MUC4 and ZEB1). This analysis is at the start of the script as it was originally conducted before realising the full scale of transcript analysis for every gene. 
+NOTE: The above analysis was also performed on specific transcripts if groups showed particular interest (e.g. MUC4 and ZEB1). This analysis is at the start of the script as it was originally conducted before realising the full scale of transcript analysis for every gene. 
 
 Full results available [here](https://github.com/mbxjy4/LIFE4137/tree/main/Isoform%20Expression%20Results) 
 
